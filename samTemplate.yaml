@@ -93,7 +93,8 @@ Resources:
   ElasticsearchDomain:
     Type: AWS::Elasticsearch::Domain
     Properties:
-      DomainName: "phot-album-cf"
+      DomainName: "photo-album-cf"
+      ElasticsearchVersion: '7.4'
       ElasticsearchClusterConfig:
         DedicatedMasterEnabled: "False"
         InstanceCount: "2"
@@ -113,6 +114,6 @@ Resources:
             Principal:
               AWS: '*'
             Action: 'es:*'
-            Resource: '*'
+            Resource: 'arn:aws:es:us-east-1:157934964394:domain/phot-album-cf/*'
       AdvancedOptions:
         rest.action.multi.allow_explicit_index: "true"
