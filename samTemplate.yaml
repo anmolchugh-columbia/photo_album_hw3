@@ -114,9 +114,15 @@ Resources:
 
   S3B4V3K4:
     Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: 'HW3-FrontEnd'
 
   S3BSCT4:
     Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: 'HW3-Audio'
 
   S3B57HAV:
     Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: 'HW3-Photos'
